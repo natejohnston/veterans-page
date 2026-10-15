@@ -725,7 +725,11 @@ ul {
 }
 
 .testimonial__header {
+  display: flex;
   width: min(100%, calc(var(--content-wide) + (var(--page-gutter) * 2)));
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
   margin-inline: auto;
   padding-inline: var(--page-gutter);
 }
@@ -746,14 +750,7 @@ ul {
 
 .testimonial__viewport {
   width: 100%;
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
-  scroll-snap-type: inline mandatory;
-  scrollbar-width: none;
-}
-
-.testimonial__viewport::-webkit-scrollbar {
-  display: none;
+  overflow: hidden;
 }
 
 .testimonial__track {
@@ -761,6 +758,7 @@ ul {
   width: max-content;
   gap: 24px;
   padding: 32px;
+  will-change: transform;
 }
 
 .review-card {
@@ -773,7 +771,6 @@ ul {
   border-radius: var(--radius-card);
   background: var(--color-white);
   box-shadow: var(--shadow-card);
-  scroll-snap-align: center;
 }
 
 .review-card__image {
@@ -835,11 +832,12 @@ ul {
 }
 
 .testimonial__track--marquee {
-  animation: review-marquee 60s linear infinite;
+  animation: review-marquee 72s linear infinite;
 }
 
 .testimonial__viewport:hover .testimonial__track--marquee,
-.testimonial__viewport:focus-within .testimonial__track--marquee {
+.testimonial__viewport:focus-within .testimonial__track--marquee,
+.testimonial__viewport.is-paused .testimonial__track--marquee {
   animation-play-state: paused;
 }
 
@@ -1461,10 +1459,10 @@ ul {
 
 @keyframes review-marquee {
   from {
-    transform: translateX(-743.8px);
+    transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translateX(calc(-743.8px - 50%));
+    transform: translate3d(var(--review-loop-distance, -1376px), 0, 0);
   }
 }
 
@@ -1794,6 +1792,26 @@ ul {
   }
 
   .mosaic__progress {
+    display: none;
+  }
+
+  .testimonial__viewport {
+    overflow: visible;
+  }
+
+  .testimonial__track,
+  .testimonial__track--marquee {
+    display: grid;
+    width: min(100%, var(--content-wide));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+    justify-content: center;
+    margin-inline: auto;
+    padding-inline: var(--page-gutter);
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .review-card[data-review-copy] {
     display: none;
   }
 }
