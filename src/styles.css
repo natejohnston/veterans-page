@@ -1523,11 +1523,7 @@ ul {
 /* Desktop composition */
 
 @media (min-width: 800px) {
-  /* .hero {
-    min-height: 900px;
-    padding-block: 40px;
-  } */
-
+    
   .hero__title,
   .hero h1 {
     font-size: 40px;
