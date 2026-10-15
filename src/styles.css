@@ -203,8 +203,9 @@ ul {
   min-height: 820px;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 32px;
-  padding: 48px var(--page-gutter);
+  padding: 80px var(--page-gutter);
   overflow: hidden;
   color: var(--color-white);
   background: var(--color-midnight);
@@ -490,7 +491,7 @@ ul {
 
 .mosaic__intro-title {
   font-family: var(--font-heading);
-  font-size: clamp(40px, 6vw, 80px);
+  font-size: 49.2px;
   font-weight: var(--weight-bold);
   line-height: 1.05;
   letter-spacing: -0.025em;
@@ -1522,10 +1523,10 @@ ul {
 /* Desktop composition */
 
 @media (min-width: 800px) {
-  .hero {
-    min-height: 567px;
-    padding-block: 80px;
-  }
+  /* .hero {
+    min-height: 900px;
+    padding-block: 40px;
+  } */
 
   .hero__title,
   .hero h1 {
