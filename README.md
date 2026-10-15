@@ -9,10 +9,10 @@ Here was the approved design
 https://www.figma.com/design/pRRgVGtAGRsrvSuu4zDyJM/Landing-Page-Trial?node-id=101-8920&t=qx8dOjJvF9iKVkAl-0
 
 ## Resources
-https://www.veteransunited.com/dev/
-https://veteransunited-my.sharepoint.com/personal/josh_hughes_vu_com/_layouts/15/guestaccess.aspx?share=IQApepuk%2DjqiQrlTQcQPxTsGAdttlz3Um5eYk0R36G8u%2DhE
+* https://www.veteransunited.com/dev/
+* Private Figma File for brand components
 
 Images and content pulled from the below resources
-https://www.veteransunited.com/reviews/
-https://www.veteransunited.com/community/
-https://www.veteransunited.com/
+* https://www.veteransunited.com/reviews/
+* https://www.veteransunited.com/community/
+* https://www.veteransunited.com/
